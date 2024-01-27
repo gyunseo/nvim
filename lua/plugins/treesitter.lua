@@ -11,8 +11,7 @@ return {
         "cpp",
         "go",
         "javascript",
-        "html",
-        "jsonc"
+        "html"
       },
       highlight = { enable = true },
       indent = { enable = true },  
