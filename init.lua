@@ -1,3 +1,7 @@
+if vim.g.vscode then
+  -- https://github.com/vscode-neovim/vscode-neovim/issues/298
+  vim.opt.clipboard:append("unnamedplus")
+end
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
