@@ -4,5 +4,5 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.wo.number = true
 vim.g.mapleader = " "
-vim.api.nvim_exec('language en_US', true)
-vim.api.nvim_set_option("clipboard","unnamed") -- to use OS clipboard 
+vim.api.nvim_exec("language en_US", true)
+vim.api.nvim_set_option("clipboard", "unnamed") -- to use OS clipboard
