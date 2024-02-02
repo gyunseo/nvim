@@ -7,3 +7,5 @@ vim.wo.number = true
 vim.g.mapleader = " "
 vim.api.nvim_exec("language en_US", true)
 vim.api.nvim_set_option("clipboard", "unnamed") -- to use OS clipboard
+vim.o.exrc = true
+vim.o.secure = true
