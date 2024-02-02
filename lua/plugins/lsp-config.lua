@@ -18,16 +18,32 @@ return {
 		end,
 	},
 	{
+		"folke/neodev.nvim",
+		opts = {},
+	},
+	{
 		"folke/neoconf.nvim",
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			-- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+			require("neodev").setup({
+				-- add any options here, or leave empty to use the default settings
+			})
 			require("neoconf").setup({
 				-- override any of the default settings here
 			})
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
+			lspconfig.lua_ls.setup({
+				settings = {
+					Lua = {
+						completion = {
+							callSnippet = "Replace",
+						},
+					},
+				},
+			})
 			lspconfig.tsserver.setup({})
 			lspconfig.clangd.setup({})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
