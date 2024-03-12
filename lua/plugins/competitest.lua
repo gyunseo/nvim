@@ -11,7 +11,7 @@ return {
 				c = { exec = "./$(FNOEXT).out" },
 				cpp = { exec = "./$(FNOEXT).out" },
 				rust = { exec = "./$(FNOEXT)" },
-				python = { exec = "python", args = { "$(FNAME)" } },
+				python = { exec = "python3", args = { "$(FNAME)" } },
 				java = { exec = "java", args = { "$(FNOEXT)" } },
 			},
 		}) -- to use default configuration, but modified some compile and run command
